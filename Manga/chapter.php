@@ -1,0 +1,1 @@
+show ra số chapter của truyện để xem

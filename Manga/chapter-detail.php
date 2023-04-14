@@ -1,0 +1,1 @@
+show ra chi tiết chapter đó
