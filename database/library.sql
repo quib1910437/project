@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 12, 2023 lúc 11:17 AM
+-- Thời gian đã tạo: Th4 14, 2023 lúc 09:37 AM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 8.2.0
 
@@ -43,6 +43,19 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`id`, `FullName`, `AdminEmail`, `UserName`, `Password`, `updationDate`) VALUES
 (1, 'Qui', 'admin@gmail.com', 'admin', '202cb962ac59075b964b07152d234b70', '2023-04-12 08:32:00'),
 (2, 'Qui', 'Qui@gmail.com', 'Qui', '123', '2023-04-12 07:05:41');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `chapter`
+--
+
+CREATE TABLE `chapter` (
+  `idchapter` int(255) NOT NULL,
+  `idtruyen` int(255) DEFAULT NULL,
+  `img` varchar(255) NOT NULL,
+  `thutu` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -123,6 +136,12 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `chapter`
+--
+ALTER TABLE `chapter`
+  ADD PRIMARY KEY (`idchapter`);
+
+--
 -- Chỉ mục cho bảng `tblbooks`
 --
 ALTER TABLE `tblbooks`
@@ -150,6 +169,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT cho bảng `chapter`
+--
+ALTER TABLE `chapter`
+  MODIFY `idchapter` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `tblbooks`
